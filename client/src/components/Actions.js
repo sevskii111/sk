@@ -782,7 +782,13 @@ class Actions extends Component {
         <div className="col s12">
           <div className="card-panel blue-grey">
             <span className="white-text center">
-              <div style={{ display: "flex" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  marginBottom: "15px"
+                }}
+              >
                 <Select
                   options={actionsOptions}
                   value={
