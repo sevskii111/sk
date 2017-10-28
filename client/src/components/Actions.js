@@ -769,7 +769,7 @@ class Actions extends Component {
       type: "exchenge"
     });
     const actionsOptions = [
-      { label: "Ручное действие", value: undefined },
+      { label: "Ручное действие", value: "" },
       ...actions.map(a => {
         return { label: a.name, value: a.name };
       })
@@ -788,19 +788,20 @@ class Actions extends Component {
                   value={
                     this.state.selectedProject
                       ? this.state.selectedProject.name
-                      : undefined
+                      : ""
                   }
                   placeholder="Ручное действие"
                   name="project"
                   onChange={t => {
-                    if (!t)
-                      return this.setState({ selectedProject: undefined });
+                    if (!t) return this.setState({ selectedProject: "" });
+                    const project = actions.find(a => a.name == t.value);
                     this.setState({
-                      selectedProject: actions.find(a => a.name == t.value),
+                      selectedProject: project,
                       multiplyer: 1
                     });
-                    if (this.state.selectedProject) {
-                      const { income, outcome } = this.state.selectedProject;
+
+                    if (project) {
+                      const { income, outcome } = project;
                       const m = 1;
                       this.setState({
                         workersI: income.workers * m,
@@ -833,7 +834,7 @@ class Actions extends Component {
                         housingO: outcome.housing * m,
                         supplyO: outcome.supply * m,
                         domesticO: outcome.domestic * m,
-                        type: this.state.selectedProject.type
+                        type: project.type
                       });
                     } else {
                       this.setState({
@@ -867,6 +868,7 @@ class Actions extends Component {
                         housingO: 0,
                         supplyO: 0,
                         domesticO: 0,
+                        selectedProject: "",
                         type: "number"
                       });
                     }
