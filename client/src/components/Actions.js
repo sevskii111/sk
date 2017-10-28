@@ -976,7 +976,7 @@ class Actions extends Component {
                   Выполнить
                 </button>
               </div>
-              <div display="flex">
+              <div style={{display: "flex", justifyContent: "space-between"}}>
                 <MdBorderAll style={sameWidthStyle} />
                 <MdAttachMoney style={sameWidthStyle} />
                 <FaIndustry style={sameWidthStyle} />
@@ -1124,7 +1124,7 @@ class Actions extends Component {
                   disabled={!!this.state.selectedProject}
                 />
               </div>
-              <div display="flex">
+              <div style={{display: "flex", justifyContent: "space-between"}}>
                 <input
                   style={sameInputWidthStyle}
                   type="number"
@@ -1265,7 +1265,8 @@ const sameWidthStyle = {
 const sameInputWidthStyle = {
   width: "50px",
   fontSize: "10px",
-  margin: "0 2px"
+  margin: "0 2px",
+  height: "50px"
 };
 
 const mapStateToProps = ({ teams, actions, exchenge }) => {
