@@ -868,7 +868,7 @@
         "soldiers": 0,
         "workersP": 0,
         "soldiersP": 0,
-        "territory": 10,
+        "territory": 100,
         "money": 10,
         "equipment": 20,
         "energy": 50,
