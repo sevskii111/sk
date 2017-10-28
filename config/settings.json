@@ -189,7 +189,7 @@
         "equipment": 25,
         "energy": 20,
         "tech": 6,
-        "transport": 10,
+        "transport": 100,
         "education": 120,
         "weapon": 0,
         "housing": 0,
