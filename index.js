@@ -34,5 +34,5 @@ app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 });
 
-app.listen(settings.port);
+app.listen(process.env.PORT || settings.port);
 mongoose.connect(mongoURI, async () => {});
