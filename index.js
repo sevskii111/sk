@@ -35,4 +35,4 @@ app.get("*", (req, res) => {
 });
 
 app.listen(process.env.PORT || settings.port);
-mongoose.connect(mongoURI);
+mongoose.connect(mongoURI, async () => {});
