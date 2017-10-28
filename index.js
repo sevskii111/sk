@@ -27,12 +27,12 @@ require("./routes/transactionRoutes")(app);
 require("./routes/exchengeRoutes")(app);
 
 
-// app.use(express.static("client/build"));
-// const path = require("path");
+app.use(express.static("client/build"));
+const path = require("path");
 
-// app.get("*", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-// });
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+});
 
 app.listen(process.env.PORT || settings.port);
 mongoose.connect(mongoURI, async () => {});
