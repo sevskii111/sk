@@ -999,7 +999,7 @@ class Actions extends Component {
                 />
                 <img src={solderIconStr} style={sameWidthStyle} />
               </div>
-              <div display="flex" style={{ justifyContent: "space-between" }}>
+              <div style={{ justifyContent: "space-between", display: "flex" }}>
                 <input
                   style={sameInputWidthStyle}
                   type="number"
