@@ -1265,7 +1265,7 @@ const sameWidthStyle = {
 };
 const sameInputWidthStyle = {
   width: "50px",
-  fontSize: "10px",
+  fontSize: "15px",
   margin: "0 2px",
   height: "50px"
 };
