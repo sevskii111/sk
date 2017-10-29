@@ -976,7 +976,7 @@ class Actions extends Component {
                   Выполнить
                 </button>
               </div>
-              <div style={{display: "flex", justifyContent: "space-between"}}>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <MdBorderAll style={sameWidthStyle} />
                 <MdAttachMoney style={sameWidthStyle} />
                 <FaIndustry style={sameWidthStyle} />
@@ -999,7 +999,7 @@ class Actions extends Component {
                 />
                 <img src={solderIconStr} style={sameWidthStyle} />
               </div>
-              <div display="flex">
+              <div display="flex" style={{justifyContent: "space-between"}}>
                 <input
                   style={sameInputWidthStyle}
                   type="number"
@@ -1124,7 +1124,7 @@ class Actions extends Component {
                   disabled={!!this.state.selectedProject}
                 />
               </div>
-              <div style={{display: "flex", justifyContent: "space-between"}}>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <input
                   style={sameInputWidthStyle}
                   type="number"
@@ -1260,7 +1260,8 @@ class Actions extends Component {
 const sameWidthStyle = {
   width: "50px",
   fontSize: "50px",
-  margin: "0 2px"
+  margin: "0 2px",
+  height: "50px"
 };
 const sameInputWidthStyle = {
   width: "50px",
