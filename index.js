@@ -26,7 +26,6 @@ require("./routes/teamsRoutes")(app);
 require("./routes/transactionRoutes")(app);
 require("./routes/exchengeRoutes")(app);
 
-
 app.use(express.static("client/build"));
 const path = require("path");
 
@@ -35,4 +34,6 @@ app.get("*", (req, res) => {
 });
 
 app.listen(process.env.PORT || settings.port);
-mongoose.connect(mongoURI, async () => {});
+setTimeout(() => {
+  mongoose.connect(mongoURI, async () => {});
+}, 5000);

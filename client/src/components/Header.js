@@ -24,10 +24,11 @@ class Header extends Component {
             <li>
               <a
                 href="#"
-                onClick={() =>
-                  setTimeout(() => {
+                onClick={() => {
+                  if (window.confirm('Вы уверены что хотите завершить год?')) {
                     this.props.resetYear();
-                  }, 10000)}
+                  } 
+                }}
               >
                 Закончить год
               </a>
@@ -35,10 +36,11 @@ class Header extends Component {
             <li>
               <a
                 href="#"
-                onClick={() =>
-                  setTimeout(() => {
+                onClick={() => {
+                  if (window.confirm('Вы уверены что хотите сбросить биржу?')) {
                     this.props.resetExchenge();
-                  }, 10000)}
+                  } 
+                }}
               >
                 Сбросить биржу
               </a>

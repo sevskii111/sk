@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    ports:
+      - "80:5000"
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    volumes:
+      - mongodb_data_container:/data/db
+
+volumes:
+  mongodb_data_container:

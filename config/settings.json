@@ -2,7 +2,7 @@
   "port": "5000",
   "authPath": "/api/secret/auth/secretpassword",
   "mongoURI":
-    "mongodb://admin:admin@ds137435.mlab.com:37435/new-civil-public-test",
+    "mongodb://mongo/nc",
   "team": {
     "workers": {
       "amount": 700,

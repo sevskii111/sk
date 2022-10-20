@@ -12,6 +12,9 @@ module.exports = app => {
 
   app.get("/api/exchenge/", async (req, res) => {
     const exchenge = await Exchenge.findOne();
+    if (!exchenge) {
+      res.json({});
+    }
     let prices = {};
     const keys = Object.keys(exchenge.startPrices);
     for (let i = 0; i < keys.length; i++) {
